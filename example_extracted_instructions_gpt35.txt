@@ -1,0 +1,134 @@
+FeatureEngineeringInstruction(
+    instruction="Standardize the 'Age_wiki' feature at index 299 using the mean and standard deviation.",
+    tags=["standardization", "continuous feature"]
+)
+FeatureEngineeringInstruction(
+    instruction="Impute missing values in the 'Fare' column with the median value from `test_ext_fltr`.",
+    tags=["imputation", "continuous feature"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Take square root of each value in every column of the dataset",
+    tags=["square root", "feature engineering"]
+)
+
+===
+
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Encode string data columns using label encoding.",
+    tags=["label encoding"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Perform dimensionality reduction using PCA with 7 components.",
+    tags=["dimensionality_reduction", "PCA"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Calculate the total angular velocity by taking the square root of the sum of squares of angular velocities in X, Y, and Z directions.",
+    tags=["total_angular_velocity", "angular_velocity"]
+)
+FeatureEngineeringInstruction(
+    instruction="Calculate the total linear acceleration by taking the square root of the sum of squares of linear accelerations in X, Y, and Z directions.",
+    tags=["total_linear_acceleration", "linear_acceleration"]
+)
+FeatureEngineeringInstruction(
+    instruction="Calculate the ratio of total linear acceleration to total angular velocity.",
+    tags=["acc_vs_vel", "total_linear_acceleration", "total_angular_velocity"]
+)
+FeatureEngineeringInstruction(
+    instruction="Convert quaternion orientation values to Euler angles.",
+    tags=["quaternion_to_euler", "orientation_X", "orientation_Y", "orientation_Z", "orientation_W"]
+)
+FeatureEngineeringInstruction(
+    instruction="Calculate the total angle by taking the fifth power of the sum of squares of Euler angles.",
+    tags=["total_angle", "euler_x", "euler_y", "euler_z"]
+)
+FeatureEngineeringInstruction(
+    instruction="Calculate the ratio of total angle to total linear acceleration.",
+    tags=["angle_vs_acc", "total_angle", "total_linear_acceleration"]
+)
+FeatureEngineeringInstruction(
+    instruction="Calculate the ratio of total angle to total angular velocity.",
+    tags=["angle_vs_vel", "total_angle", "total_angular_velocity"]
+)
+FeatureEngineeringInstruction(
+    instruction="Perform feature engineering on each column of the actual DataFrame: calculate mean, minimum, maximum, standard deviation, and maximum-to-minimum ratio for each column grouped by series_id. Calculate mean absolute change and mean change of absolute change for each column grouped by series_id. Calculate absolute maximum and absolute minimum for each column grouped by series_id.",
+    tags=["mean", "minimum", "maximum", "std", "max_to_min", "mean_abs_change", "mean_change_of_abs_change", "abs_max", "abs_min"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Define ordered categories for 'ord_1' and 'ord_2' features.",
+    tags=["ordered categories", "categorical features"]
+)
+FeatureEngineeringInstruction(
+    instruction="Convert 'ord_1' and 'ord_2' columns in 'train' dataframe to ordered categorical data type.",
+    tags=["data type conversion", "categorical features"]
+)
+FeatureEngineeringInstruction(
+    instruction="Encode categorical features in 'train' dataframe using OneHotEncoder.",
+    tags=["encoding", "categorical features"]
+)
+FeatureEngineeringInstruction(
+    instruction="Encode 'all_data' dataframe using fitted encoder.",
+    tags=["encoding", "categorical features"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map values of 'bin_3' column in 'all_data' dataframe to 0 and 1.",
+    tags=["mapping", "binary feature"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map values of 'bin_4' column in 'all_data' dataframe to 0 and 1.",
+    tags=["mapping", "binary feature"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map values of 'ord_1' column in 'all_data' dataframe using ord1dict mapping.",
+    tags=["mapping", "ordinal feature"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map values of 'ord_2' column in 'all_data' dataframe using ord2dict mapping.",
+    tags=["mapping", "ordinal feature"]
+)
+FeatureEngineeringInstruction(
+    instruction="Encode 'ord_3', 'ord_4', and 'ord_5' columns in 'all_data' dataframe using OrdinalEncoder.",
+    tags=["encoding", "ordinal features"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Encode categorical variable 'color' using LabelEncoder.",
+    tags=["encoding", "categorical variable"]
+)
+
+===
+
+
+===
+
+FeatureEngineeringInstruction(
+    instruction='Replace categorical values in the "cut" column of the "df_test" DataFrame with numerical values: "Fair" is replaced with 0, "Good" with 1, "Ideal" with 2, "Very Good" with 3, and "Premium" with 4.',
+    tags=['categorical encoding', 'feature engineering']
+)
+FeatureEngineeringInstruction(
+    instruction='Replace categorical values in the "color" column of the "df_test" DataFrame with numerical values: "D" is replaced with 0, "E" with 1, "F" with 2, "G" with 3, "H" with 4, "I" with 5, and "J" with 6.',
+    tags=['categorical encoding', 'feature engineering']
+)
+FeatureEngineeringInstruction(
+    instruction='Replace categorical values in the "clarity" column of the "df_test" DataFrame with numerical values: "VS2" is replaced with 0, "SI2" with 1, "VVS2" with 2, "VS1" with 3, "SI1" with 4, "VVS1" with 5, "IF" with 6, and "I1" with 7.',
+    tags=['categorical encoding', 'feature engineering']
+)
+
+===
+

@@ -1,0 +1,98 @@
+FeatureEngineeringInstruction(
+    instruction="Standardize the 'Age_wiki' feature by subtracting its mean and then dividing by its standard deviation. This operation should be performed for each entry in the 'Age_wiki' column. Use pre-calculated mean and standard deviation values from a dictionary called cont_col_stat that contains statistics for continuous columns.",
+    tags=["standardization", "scaling", "continuous"]
+)
+FeatureEngineeringInstruction(
+    instruction="Encode categorical variables using label encoding. Create a dictionary where each key represents a categorical variable name, and its value is another dictionary mapping each unique category to an integer label. This operation should be applied to all categorical features present in tp.cat_names.",
+    tags=["encoding", "categorical"]
+)
+FeatureEngineeringInstruction(
+    instruction="Impute missing values in the 'Fare' column of the test dataset with its median value. First, calculate the median value of 'Fare' from test_ext_fltr, then fill NA/NaN values in place using this median value.",
+    tags=["imputation", "missing_values", "continuous"]
+)
+FeatureEngineeringInstruction(
+    instruction="Process new test data to match training data transformations. This includes applying all preprocessing steps such as normalization, encoding, and imputation to ensure consistency between training and test datasets before making predictions.",
+    tags=["preprocessing", "transformation", "test_data"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Apply a square root transformation to all numerical features in a pandas DataFrame. Iterate over each column in the DataFrame, use NumPy's sqrt function to compute the square root of each element, and replace the original values in each column with their square roots.",
+    tags=["feature transformation", "numerical transformation", "square root"]
+)
+
+===
+
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Encode the 'color' column in both training and test datasets using label encoding, which assigns a unique integer to each unique string label present in the 'color' column. Use sklearn's LabelEncoder for this purpose. Fit the encoder on the training data 'color' column and then transform both training and test 'color' columns using this fitted encoder.",
+    tags=["label encoding", "categorical feature", "string to integer"]
+)
+FeatureEngineeringInstruction(
+    instruction="Encode the 'type' column in the training dataset using label encoding, converting string labels into numeric format. This is done by fitting LabelEncoder on the 'type' column after casting it to string type explicitly, then transforming this column using the fitted encoder.",
+    tags=["label encoding", "target variable", "string to integer"]
+)
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Standardize features by removing the mean and scaling to unit variance. This is done before applying PCA to ensure that each feature contributes equally to the analysis.",
+    tags=["standardization", "scaling", "preprocessing"]
+)
+FeatureEngineeringInstruction(
+    instruction="After determining the ideal number of PCA components, apply PCA transformation again to reduce features to this number. In this case, reduce features to 7 principal components based on previous analysis.",
+    tags=["PCA", "dimensionality reduction", "feature extraction"]
+)
+
+===
+
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Convert 'ord_1' and 'ord_2' columns in 'train' DataFrame to ordered categorical types with predefined categories specified in 'ord_1_value' and 'ord_2_value' variables. Ensure that these categorical types are ordered.",
+    tags=["categorical encoding", "ordered"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map binary values in 'bin_3' column from 'F'/'T' to 0/1 respectively, and 'bin_4' column from 'N'/'Y' to 0/1 respectively in 'all_data' DataFrame.",
+    tags=["binary encoding"]
+)
+FeatureEngineeringInstruction(
+    instruction="Map ordinal categories in 'ord_1' column using predefined dictionary 'ord1dict' that maps categories to ordered numerical values, similarly map 'ord_2' column using predefined dictionary 'ord2dict'.",
+    tags=["ordinal encoding"]
+)
+FeatureEngineeringInstruction(
+    instruction="Apply one-hot encoding to all features in 'all_data' DataFrame using OneHotEncoder from sklearn.preprocessing, resulting in a sparse matrix.",
+    tags=["one-hot encoding"]
+)
+FeatureEngineeringInstruction(
+    instruction="Apply ordinal encoding to columns 'ord_3', 'ord_4', and 'ord_5' of 'all_data' DataFrame using OrdinalEncoder from sklearn.preprocessing.",
+    tags=["ordinal encoding"]
+)
+
+===
+
+
+===
+
+
+===
+
+FeatureEngineeringInstruction(
+    instruction="Replace categorical string values in the 'cut' column of the df_test DataFrame with integer codes as follows: 'Fair' -> 0, 'Good' -> 1, 'Ideal' -> 2, 'Very Good' -> 3, 'Premium' -> 4.",
+    tags=["categorical encoding", "feature transformation", "integer encoding"]
+)
+FeatureEngineeringInstruction(
+    instruction="Replace categorical string values in the 'color' column of the df_test DataFrame with integer codes as follows: 'D' -> 0, 'E' -> 1, 'F' -> 2, 'G' -> 3, 'H' -> 4, 'I' -> 5, 'J' -> 6.",
+    tags=["categorical encoding", "feature transformation", "integer encoding"]
+)
+FeatureEngineeringInstruction(
+    instruction="Replace categorical string values in the 'clarity' column of the df_test DataFrame with integer codes as follows: 'VS2' -> 0, 'SI2' -> 1, 'VVS2' -> 2, 'VS1' -> 3, 'SI1' -> 4, 'VVS1' -> 5, 'IF' -> 6, 'I1' -> 7.",
+    tags=["categorical encoding", "feature transformation", "integer encoding"]
+)
+
+===
+
